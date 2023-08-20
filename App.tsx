@@ -56,8 +56,8 @@ export default function App() {
 
   useEffect(() => {
     const minuteInterval = setInterval(() => {
-      setTimeSpent((prevTimeSpent) => prevTimeSpent + 60000); // 60000 milliseconds = 1 minute
-    }, 60000);
+      setTimeSpent((prevTimeSpent) => prevTimeSpent + 20000); // 60000 milliseconds = 1 minute
+    }, 20000);
 
     return () => {
       clearInterval(minuteInterval);

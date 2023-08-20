@@ -36,25 +36,10 @@ export const useGetFollowing = () => {
     }
   };
 
-  const revealAnswer = async () => {
-    try {
-      const res = await fetch(
-        `https://cross-platform.rp.devfactory.com/reveal?id=${followingData?.id}`
-      );
-
-      const data: MCQCard = await res.json();
-      setForYouData(data);
-    } catch (error) {
-      setErrorMsg("Could not load data");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     fetchFollowingData();
     fetchForYouData();
   }, []);
 
-  return { data: loading, errorMsg, followingData,  forYouData };
+  return { data: loading, errorMsg, followingData, forYouData };
 };
