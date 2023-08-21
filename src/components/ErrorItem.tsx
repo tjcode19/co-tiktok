@@ -1,5 +1,6 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import React from "react";
 
 const ErrorItem = () => {
   return (
